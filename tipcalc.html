@@ -100,8 +100,11 @@
               <fieldset id="total-field">
               <legend id="tip-leg">Your total is:</legend>
                 <div id="total-container">
+                  <!-- display total -->
                   $ <span id="total-box">0.00</span>
                 </div>
+                <!-- show tip amount used in calculation -->
+                <span id="tip-amount"></span>
               </fieldset>
             </li><br>
 
@@ -113,7 +116,10 @@
                 </button>
                 <button id="reset-btn" name="reset-btn">
                   Start Over
-                </button><br>
+                </button>
+                <button id="split-btn" name="split-btn">
+                  Split Check
+                </button>
               </fieldset>
             </li>
           </ul>

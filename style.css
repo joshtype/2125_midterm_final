@@ -129,12 +129,15 @@ textarea {
 #total-container {
   font-size: 2rem;
 }
-
-#calc-btn, #reset-btn {
+#tip-amount {
+  font-size: .75rem;
+  color: purple;
+}
+#calc-btn, #reset-btn, #split-btn {
   width: 140px;
   height: 60px;
 }
-#calc-btn:hover, #reset-btn:hover {
+#calc-btn:hover, #reset-btn:hover, #split-btn:hover {
   color: orangered;
   cursor: pointer;
 }
