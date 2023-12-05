@@ -1,0 +1,140 @@
+/*
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Midterm Exam CSS File
+  8 Oct. 2023
+*/
+
+html { 
+  height: 100%; 
+  width: 100%; 
+}
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color: darkcyan;
+  background-image: url(img/robot_girl.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* GRID AREA NAMES & TEMPLATE */
+.logo-header { grid-area: logo-h; }
+.text-header { grid-area: text-h; }
+.nav { grid-area: nav; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1em;
+  grid-template-areas: 
+    'logo-h logo-h text-h text-h'
+    'nav main main main'
+    'footer footer footer footer';
+}
+
+/* LINKS & HEADINGS STYLES */
+a { color: lime; text-decoration: none; }
+a:hover { color: orangered; text-decoration: none; font-size: 1.05rem; }
+a:active { color: darkviolet; text-decoration: none; }
+h1 { color: orange}
+h3 { color: darkviolet; }
+
+/* BUTTON STYLES */
+button {
+  color: lime;
+  background-image: url(img/turq_bg.jpg);
+  margin-top: 0em;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  width: 125px;
+  height: 60px;
+}
+
+/* HEADER STYLES */
+section > * {
+  background-color: paleturquoise;
+  border: 1px solid lime;
+}
+.logo {
+  width: 250px;
+  height: 300px;
+  padding-left: 50%;
+}
+.text-header {
+  padding-top: 10%;
+  padding-right: 25%;
+}
+
+/* NAV STYLES */
+.nav {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/* MAIN STYLES */
+.main {
+  background-color: paleturquoise;
+  border: 1px solid lime;
+  color: orangered;
+}
+#intro { padding-top: 3%; }
+
+/* FOOTER STYLES */
+footer {
+  border: 1px solid lime;
+  font-weight: 600;
+}
+#tel-btn {
+  width: 140px;
+  height: 60px;
+}
+.address-phone { color: orangered; }
+#mod-dt { color: black; }
+
+/* FORM STYLES */
+form { color: darkviolet; }
+.form-item { padding: 1em; }
+.form-list {
+  list-style: none;
+  padding: 1em;
+}
+textarea {
+  width: 100%;
+  border: 2px solid lime;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* tipcalc.html SLIDER STYLES */
+#tip-leg {
+  color: purple;
+}
+#subtotal {
+  width: 25%;
+}
+#tip-slider {
+  background-color: purple;
+  color: orangered;
+  width: 50%;
+}
+#tip-value-box {
+  border: 1px solid purple;
+  background-color: white;
+  margin-left: 1.5rem;
+}
+#total-container {
+  font-size: 2rem;
+}
+
+#calc-btn, #reset-btn {
+  width: 140px;
+  height: 60px;
+}
+#calc-btn:hover, #reset-btn:hover {
+  color: orangered;
+  cursor: pointer;
+}

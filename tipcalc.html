@@ -1,0 +1,167 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Midterm Exam HTML File
+  8 Oct. 2023
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tip Calculator</title>
+    <link rel="icon" type="image/x-icon" href="img/ico_robot.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="idx-body">
+    <div class="grid-container" id="grid">
+
+      <!-- LEFT HEADER CARD: TOP ROW x LEFT COL -->
+      <header class="logo-header" id="logo-header">
+        <img src="img/header_logo.png" alt="wooly robot" class="logo" />
+      </header>
+
+      <!-- RIGHT HEADER CARD: TOP ROW x RIGHT COL -->
+      <section class="text-header" id="text-header">
+        <center>
+          <h1>Octobot AI Consulting: Home</h1><br>
+          <h3>Bridging the gap between <br> AI and everyday life.</h3>
+        </center>
+      </section>
+
+      <!-- NAV CARD: MID ROW x LEFT COL -->
+      <nav class="nav" id="nav-content">
+        <button class="nav-btn">
+          <a href="index.html" class="nav-item">
+            Home Page</a>
+        </button><br>
+        <button class="nav-btn">
+          <a href="form.html" class="nav-item">
+            Fill Form</a>
+        </button><br>
+        <button class="nav-btn">
+          <a href="tipcalc.html" class="nav-item">
+            Tip Calculator</a>
+        </button><br>
+        <button class="nav-btn">
+          <a href="https://www.leetcode.com" class="nav-item">
+            LeetCode</a>
+        </button>
+      </nav>
+
+      <!-- MAIN CARD: MID ROW x RIGHT COL -->
+      <main class="main" id="main-content">
+        <!-- tip calculator form -->
+          <ul class="form-list">
+            <h3>Calculate your tip using the form below:</h3>
+
+            <!-- input field: total bill amount -->
+            <li class="form-li">
+              <fieldset id="subtotal-field">
+              <legend id="tip-leg">Enter the total bill amount:</legend>
+                <label for="subtotal">$</label>
+                <input type="number" id="subtotal" name="subtotal"
+                  minlength="1" placeholder="99.99" 
+                  pattern="[0-9]+" required />
+                <label for="subtotal">(USD)</label>
+              </fieldset>
+            </li><br>
+
+            <!-- input slider: select tip percentage -->
+            <li class="form-li">
+              <fieldset id="tip-field">
+              <legend id="tip-leg">Select a tip percentage:</legend>
+                <div class="slider-container">
+                  <!-- slider -->
+                  <input type="range" min="10" max="50" step="1" value="0"
+                    name="tip" id="tip-slider" list="tip-ticks" />
+                  <!-- percentage options -->
+                  <datalist id="tip-ticks">
+                    <option value="10"></option>
+                    <option value="15"></option>
+                    <option value="20"></option>
+                    <option value="25"></option>
+                    <option value="30"></option>
+                    <option value="35"></option>
+                    <option value="40"></option>
+                    <option value="45"></option>
+                    <option value="50"></option>
+                  </datalist>
+                  <!-- display slider value -->
+                  <span id="tip-value-box">10%</span>
+                </div>
+              </fieldset>
+            </li><br>
+
+            <!-- output: calculate tip amount & total bill -->
+            <li class="form-li">
+              <fieldset id="total-field">
+              <legend id="tip-leg">Your total is:</legend>
+                <div id="total-container">
+                  $ <span id="total-box">0.00</span>
+                </div>
+              </fieldset>
+            </li><br>
+
+            <!-- calculate and reset buttons -->
+            <li class="form-li">
+              <fieldset id="btn-field">
+                <button id="calc-btn" name="calc-btn">
+                  Calculate Total
+                </button>
+                <button id="reset-btn" name="reset-btn">
+                  Start Over
+                </button><br>
+              </fieldset>
+            </li>
+          </ul>
+      </main>
+
+      <!-- FOOTER CARD: BOTTOM ROW x ALL COLS -->
+      <footer class="footer" id="footer-content">
+        <center>
+          <p class="contact-info" id="contact-info">
+            Octobot AI Consulting<br>
+            Waycross, GA, 31501; +1 555-555-5555
+          </p>
+          <p class="contact-info">
+            <button id="tel-btn">
+              <a href="tel: +15555555555">
+                Call Us
+              </a>
+            </button>
+            <button class="footer-btn" id="git-btn">
+              <a href="https://github.com/joshtype" id="github">
+                GitHub
+              </a>
+            </button>
+            <button class="footer-btn" id="gmail-btn">
+              <a href="mailto: octobot@ai.com" id="email">
+                Octomail
+              </a>
+            </button>
+            <br><br>
+            <!-- dynamic datetime -->
+            Last Modified:<br>
+            <span id="mod-dt"><!-- updating datetime --></span>
+          </p>
+          
+          <small class="copy" id="copyright">
+            &copy;2023 Joshua Gregory<br>
+            Background images made using StarryAI.com.
+          </small>
+        </center>
+      </footer>
+
+    </div>  <!-- close grid container -->
+                
+    <!-- JS SCRIPTS -->
+    <script src="datetime.js"></script>
+    <script src="tipcalc.js"></script>
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark"
+      position="bottom-right"></script>
+                
+  </body>
+</html>

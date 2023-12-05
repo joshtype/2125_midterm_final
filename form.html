@@ -1,0 +1,184 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Midterm Exam HTML File
+  8 Oct. 2023
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="img/ico_robot.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body id="p2-body">
+    <div class="grid-container" id="p2-grid">
+
+      <!-- LEFT HEADER CARD: TOP ROW x LEFT COL -->
+      <header class="logo-header" id="logo-header">
+        <img src="img/header_logo.png" alt="wooly robot" class="logo" />
+      </header>
+
+      <!-- RIGHT HEADER CARD: TOP ROW x RIGHT COL -->
+      <section class="text-header" id="text-header">
+        <center>
+          <h1>Octobot AI Consulting, LLC</h1><br>
+          <h3>Bridging the gap between <br> AI and everyday life.</h3>
+        </center>
+      </section>
+
+      <!-- NAV CARD: MID ROW x LEFT COL -->
+      <nav class="nav" id="nav-content">
+        <button class="nav-btn">
+          <a href="index.html">Home Page</a>
+        </button><br>
+        <button class="nav-btn">
+          <a href="form.html">Fill Form</a>
+        </button><br>
+        <button class="nav-btn">
+          <a href="tipcalc.html">Tip Calculator</a>
+        </button><br>
+        <button class="nav-btn">
+          <a href="https://www.leetcode.com">LeetCode</a>
+        </button>
+      </nav>
+
+      <!-- MAIN CARD: MID ROW x RIGHT COL -->
+      <main class="main" id="main-content">
+        <!-- web form start -->
+        <form action="https://webdevbasics.net/scripts/yoga.php" method="post"
+          id="reg-form">
+          <ul class="form-list">
+            <h3>Register by filling out the form below:</h3>
+
+            <!-- last name, first name, bday -->
+            <li class="li-form">
+              <fieldset id="basic-info">
+                <legend>Basic Info:</legend>
+                <!-- last name -->
+                <label for="lname">Last Name</label><br>
+                <input type="text" name=";name" id="lname" value="" />
+                <!-- first name --><br>
+                <label for="fname">First Name</label><br>
+                <input type="text" name="fname" id="fname" value="" />
+                <!-- bday --><br><br>
+                <label for="bday">Birthdate</label><br>
+                <input type="date" name="bday" id="bday" value="" />
+                <!-- state select --><br>
+                <label for="select-state">Residence</label><br>
+                <select id="select-state" name="select-state">
+                  <option value="OR">Oregon</option>
+                  <option value="WA">Washington</option>
+                  <option value="CA">California</option>
+                </select><br>
+              </fieldset>
+            </li><br>
+            
+            <!-- email, username, password, confirm password -->
+            <li class="li-form">
+              <fieldset id="account-info">
+                <legend>Account Info:</legend>
+                <!-- email -->
+                <label for="mail">Email</label><br>
+                <input type="email" name="mail" id="mail" value="x@y.com" />
+                <br>
+                <!-- username -->
+                <label for="username">Username</label><br>
+                <input type="text" name="username" id="username" value="" />
+                <br><br>
+                <!-- password -->
+                <label for="pass">Password</label><br>
+                <input type="password" name="pass" id="pass" value="********" />
+                <br>
+                <!-- confirm password -->
+                <label for="onfirm">(Confirm Password)</label><br>
+                <input type="password" name="confirm" id="confirm" value="********" />
+                <br>
+              </fieldset>
+            </li><br>
+
+            <!-- radio group: ai skill -->
+            <li class="li-form">
+              <fieldset id="radio-group">
+                <legend>AI Skill Level:</legend>
+                <input type="radio" name="ai-skill" id="very" value="very" />
+                <label for="very">Can program AI in my sleep.</label>
+                <br>
+                <input type="radio" name="ai-skill" id="some" value="some" />
+                <label for="some">Followed a few programming tutorials.</label>
+                <br>
+                <input type="radio" name="ai-skill" id="little" value="little" />
+                <label for="little">Studied AI, but have little experience.</label>
+                <br>
+                <input type="radio" name="ai-skill" id="none" value="none" />
+                <label for="none">Not really sure what AI is, exactly.</label>
+                <br>
+              </fieldset>
+            </li><br>
+
+            <!-- comments: thoughts on AI -->
+            <li class="li-form">
+              <label for="comments">How does AI make you feel?</label><br>
+              <center>
+              <textarea name="comments" id="comments" rows="8" cols="75">
+              </textarea>
+              </center>
+            </li>
+
+            <li class="li-form">
+              <input type="submit" name="submit" id="submit" value="Submit" />
+              <input type="reset" name="reset" id="reset" value="Reset" />
+            </li>
+          </ul>
+        </form>
+      </main>
+
+      <!-- FOOTER CARD: BOTTOM ROW x ALL COLS -->
+      <footer class="footer" id="footer-content">
+        <center>
+          <p class="contact-info" id="idx-contact">
+            Octobot AI Consulting<br>
+            Waycross, GA, 31501
+          </p>
+          <p class="contact-info">
+            <button id="tel-btn">
+              <a href="tel: +15555555555">
+                +1 (555) 555-5555
+              </a>
+            </button>
+            <button class="git-btn" id="git-btn">
+              <a href="https://github.com/joshtype">
+                GitHub
+              </a>
+            </button>
+            <button class="gmail-btn" id="gmail-btn">
+              <a href="mailto: octobot@ai.com">
+                Octomail
+              </a>
+            </button>
+            <br><br>
+            <!-- dynamic datetime -->
+            Last Modified:<br>
+            <span id="mod-dt"><!-- updating datetime --></span>
+          </p>
+          
+          <small class="copyright" id="copyright">
+            &copy;2023 Joshua Gregory<br>
+            Background images made using StarryAI.com.
+          </small>
+        </center>
+      </footer>
+
+    </div>  <!-- close grid container -->
+
+    <!-- JS SCRIPTS -->
+    <script src="datetime.js"></script>
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark"
+      position="bottom-right"></script>
+    
+  </body>
+</html>
